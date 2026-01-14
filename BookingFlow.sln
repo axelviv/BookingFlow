@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "spaceservice", "SpaceService\spaceservice.csproj", "{05929304-59B4-F6CC-9904-D86C91ECC9FF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{05929304-59B4-F6CC-9904-D86C91ECC9FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{05929304-59B4-F6CC-9904-D86C91ECC9FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{05929304-59B4-F6CC-9904-D86C91ECC9FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{05929304-59B4-F6CC-9904-D86C91ECC9FF}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FEDD8817-4593-493C-894B-6F3DDE14EB76}
+	EndGlobalSection
+EndGlobal
