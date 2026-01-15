@@ -16,5 +16,8 @@ namespace SpaceService.Domain.Entities
         public int Capacity { get; set; }
         public decimal Price { get; set; }
         public bool IsActive { get; set; } = true;
+        public DateTime CreatedAt { get; set; }
+        public DateTime? UpdatedAt { get; set; }
+
     }
 }

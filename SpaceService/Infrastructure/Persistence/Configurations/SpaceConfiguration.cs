@@ -30,34 +30,42 @@ namespace SpaceService.Infrastructure.Persistence.Configurations
 
             // Name
             builder.Property(s => s.Name)
-            .IsRequired()
-            .HasMaxLength(50)
-            .HasColumnName("Name");
+                .IsRequired()
+                .HasMaxLength(50)
+                .HasColumnName("Name");
 
             // Type (enum) 
             builder.Property(s => s.Type)
-            .HasConversion<int>()
-            .IsRequired();
+                .HasConversion<int>()
+                .IsRequired();
 
             // Description 
             builder.Property(s => s.Description)
-            .HasMaxLength(500)
-            .HasColumnType("nvarchar(500)")
-            .HasColumnName("Description");
+                .HasMaxLength(500)
+                .HasColumnType("nvarchar(500)")
+                .HasColumnName("Description");
 
             // Capacity
             builder.Property(s => s.Capacity)
-            .IsRequired();
+                .IsRequired();
 
             // Price 
             builder.Property(s => s.Price)
-            .HasPrecision(18, 2)
-            .IsRequired();
+                .HasPrecision(18, 2)
+                .IsRequired();
 
             // IsActive 
             builder.Property(s => s.IsActive)
-            .HasDefaultValue(true)
-            .IsRequired();          
+                .HasDefaultValue(true)
+                .IsRequired();
+
+            // Fechas
+            builder.Property(s => s.CreatedAt)
+                .HasDefaultValueSql("GETUTCDATE()")
+                .IsRequired();
+
+            builder.Property(s => s.UpdatedAt);
+
         }
     }
 }
