@@ -9,11 +9,11 @@ using SpaceService.Infrastructure.Persistence;
 
 #nullable disable
 
-namespace spaceservice.Migrations
+namespace SpaceService.Infrastructure.Migrations
 {
-    [DbContext(typeof(ApplicationDBContext))]
-    [Migration("20260115020821_Init")]
-    partial class Init
+    [DbContext(typeof(SpaceDbContext))]
+    [Migration("20260116035147_AgregarFechas")]
+    partial class AgregarFechas
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -33,6 +33,11 @@ namespace spaceservice.Migrations
 
                     b.Property<int>("Capacity")
                         .HasColumnType("int");
+
+                    b.Property<DateTime>("CreatedAt")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("datetime2")
+                        .HasDefaultValueSql("GETUTCDATE()");
 
                     b.Property<string>("Description")
                         .IsRequired()
@@ -57,6 +62,9 @@ namespace spaceservice.Migrations
 
                     b.Property<int>("Type")
                         .HasColumnType("int");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
 
                     b.HasKey("Id");
 

@@ -1,8 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Humanizer;
 using SpaceService.Domain.Enums;
 
 namespace SpaceService.Domain.Entities
@@ -18,6 +13,5 @@ namespace SpaceService.Domain.Entities
         public bool IsActive { get; set; } = true;
         public DateTime CreatedAt { get; set; }
         public DateTime? UpdatedAt { get; set; }
-
     }
 }

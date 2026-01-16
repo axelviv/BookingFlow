@@ -3,10 +3,10 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace spaceservice.Migrations
+namespace SpaceService.Infrastructure.Migrations
 {
     /// <inheritdoc />
-    public partial class agregadoFechas : Migration
+    public partial class AgregarFechas : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)

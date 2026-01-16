@@ -8,9 +8,9 @@ using SpaceService.Infrastructure.Persistence.Configurations;
 
 namespace SpaceService.Infrastructure.Persistence
 {
-    public class ApplicationDBContext : DbContext
+    public class SpaceDbContext : DbContext
     {
-        public ApplicationDBContext(DbContextOptions dbContextOptions) : base(dbContextOptions)
+        public SpaceDbContext(DbContextOptions<SpaceDbContext> options) : base(options)
         {
         }
 
@@ -18,7 +18,7 @@ namespace SpaceService.Infrastructure.Persistence
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            base.OnModelCreating(modelBuilder); 
+            base.OnModelCreating(modelBuilder);
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(SpaceConfiguration).Assembly);
         }
     }

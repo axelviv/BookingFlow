@@ -57,15 +57,14 @@ namespace SpaceService.Infrastructure.Persistence.Configurations
             // IsActive 
             builder.Property(s => s.IsActive)
                 .HasDefaultValue(true)
-                .IsRequired();
-
+                .IsRequired();            
+            
             // Fechas
             builder.Property(s => s.CreatedAt)
                 .HasDefaultValueSql("GETUTCDATE()")
                 .IsRequired();
 
             builder.Property(s => s.UpdatedAt);
-
         }
     }
 }
